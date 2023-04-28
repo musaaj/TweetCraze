@@ -1,0 +1,18 @@
+{% extends 'todo_base.html' %}
+
+{% block title %}
+Hello {{user.first_name}}
+{% endblock title %}
+
+{% block content %}
+  <div class="container-fluid">
+	  <h1>Hello {{user.first_name}}</h1>
+	  <p>
+	  Thank you for signing up. Your account is ready. Go to the dashboard to
+	  see what TweetCraze has in store for you!
+	  </p>
+	  <p class="d-grid">
+	  <a class="btn btn-lg w3-theme-action" href="{% url 'index' %}">Goto Dashboard</a>
+	  </p>
+  </div>
+{% endblock content %}

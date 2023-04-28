@@ -1,0 +1,24 @@
+{% extends 'todo_base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'custom_style.css' %}">
+{% endblock css %}
+
+{% block title %}Confirm Email{% endblock title %}
+{% block content %}
+<div class="container-fluid p-4">
+    <h1>Confirm Your Email</h1>
+    <p>We have sent an email to your address with a confirmation link. Please click the link to confirm your email.</p>
+	<p>Or</p>
+	<form method="post">
+		{% csrf_token %}
+		<p class="text-danger">{{error}}</p>
+		{{form.as_p}}
+		<div class="d-grid">
+		<input class="btn btn-lg w3-theme-action" type="submit" value="confirm" />
+		</div>
+	</form>
+</div>
+
+{% endblock %}

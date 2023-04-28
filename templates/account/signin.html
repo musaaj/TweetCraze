@@ -1,0 +1,46 @@
+{% extends 'todo_base.html' %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'custom_style.css' %}">
+{% endblock css %}
+{% block title %}
+    TweetCraze | Login
+{% endblock title %}
+{% block content %}
+    <section class="container-fluid row">
+        <form class="card shadow d-none d-lg-block d-md-block p-3 row-items"
+              method="post">
+            <h1 class="p-2">Login</h1>
+            {% csrf_token %}
+            {% if error %}<p class="text-danger">{{ error }}!</p>{% endif %}
+            {{form}}
+            <button class="btn-lg btn  w3-theme-action" type="submit">Log in</button>
+            <p class="p-2">
+                Don't have an account? <a href="{% url 'signup' %}">Register</a>
+            </p>
+        </form>
+        <form class="container-fluid clearfix d-md-none d-lg-none d-sm-block"
+              method="post">
+            <h1 class="p-2">Login</h1>
+            {% csrf_token %}
+			<p class="text-danger">{{form.non_field_errors.as_text}}</p>
+			<p>
+			<label>{{form.email.label}}:</label>
+			{{form.email}}
+			</p>
+			<p>
+			<label>{{form.password.label}}:</label>
+			{{form.password}}
+			</p>
+			<p class="p-2">
+			Forgot your password? <a href="#">Recover</a> your account
+			</p>
+            <div class="d-grid">
+                <button class="btn btn-lg btn-block w3-theme-action" type="submit">Login</button>
+            </div>
+            <p class="container-fluid p-3">
+                Don't have an account? <a href="{% url 'signup' %}">Register</a>
+            </p>
+        </form>
+    </section>
+{% endblock content %}

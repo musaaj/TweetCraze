@@ -1,0 +1,42 @@
+{% extends 'todo_base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'custom_style.css' %}">
+{% endblock css %}
+{% block title %}
+    TweetCraze | Sign Up
+{% endblock title %}
+{% block content %}
+    <section class="container-fluid mx-4 d-none d-md-block d-md-block row">
+        <form class="card shadow p-2 row-items" method="post">
+            <h1 class="p-2">Register</h1>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn w3-theme-action" type="submit">Register</button>
+            <p class="my-3">
+                Already have an account? <a href="{% url 'login' %}">Sign in</a>
+            </p>
+        </form>
+    </section>
+    <section class="container-fluid d-lg-none d-md-none d-sm-block">
+        <form class="form p-2" method="post" id="form">
+            <h1 class="p-2">Register</h1>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <p class="container-fluid p-2">
+                By clicking Register you agreed to Victory Technology's <a href="#">terms and conditions</a> as well as our <a href="#">privacy policy</a>
+            </p>
+            <div class="d-grid">
+                <button class="btn btn-lg btn-block w3-theme-action" type="submit" name="submit">Register</button>
+            </div>
+            <p class="container-fluid p-3">
+                Already have an account? <a href="{% url 'login' %}">Sign in</a>
+            </p>
+        </form>
+    </section>
+{% endblock content %}
+
+{% block js %}
+	<script src="{% static 'js/script.js' %}"></script>
+{% endblock js %}

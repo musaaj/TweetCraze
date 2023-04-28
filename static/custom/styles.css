@@ -1,0 +1,21 @@
+.my-row{
+	margin: 0;
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-items: center;
+	justify-content: center;
+}
+.my-col{
+	text-align: center;
+	justify-self: center;
+	margin: 4px 4px 4px 4px;
+	width:33.3333%;
+	border: 1px solid #999999;
+}
+.image{
+	width:inherit;
+	display:block;
+	height:200px;
+}
+

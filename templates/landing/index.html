@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="display-1 w3-text-theme text-center">Automate Your Twitter Strategy for Free!</h1>
+                <h2 class="lead text-center">Introducing TweetCrazy - the ultimate destination for free Twitter automation tools.</h2>
+                <div class="row g-4 mt-5">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static 'images/tweetscheduling.png' %}"
+                                 alt="Free Tweet Scheduling"
+                                 class="card-img-top"
+                                 style="height: 128px;
+                                        width: 128px;
+                                        margin: 0 auto">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Free Tweet Scheduling</h3>
+                                <p class="card-text">Schedule your tweets in advance and save time and energy.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static 'images/tweetdelete.png' %}"
+                                 alt="Free Tweet Bulk Delete"
+                                 class="card-img-top"
+                                 style="height: 128px;
+                                        width: 128px;
+                                        margin: 0 auto">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Free Tweet Bulk Delete</h3>
+                                <p class="card-text">Delete multiple tweets at once with ease.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static 'images/followunfollow.png' %}"
+                                 alt="Free Bulk Follow and Unfollow"
+                                 class="card-img-top"
+                                 style="height: 128px;
+                                        width: 128px;
+                                        margin: 0 auto">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Free Bulk Follow and Unfollow</h3>
+                                <p class="card-text">Follow or unfollow multiple Twitter accounts at once.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <img src="{% static 'images/autoreply.png' %}"
+                                 alt="Auto Tweet Reply"
+                                 class="card-img-top"
+                                 style="height: 128px;
+                                        width: 128px;
+                                        margin: 0 auto">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Auto Tweet Reply</h3>
+                                <p class="card-text">Engage with your audience by setting up automatic replies.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <img src="{% static 'images/dm.png' %}"
+                                 alt="Bulk Direct Messaging"
+                                 class="card-img-top"
+                                 style="height: 128px;
+                                        width: 128px;
+                                        margin: 0 auto">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Bulk Direct Messaging</h3>
+                                <p class="card-text">Send targeted messages to multiple Twitter users at once.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endblock content %}

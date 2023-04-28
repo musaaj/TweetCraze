@@ -1,0 +1,20 @@
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+  <div class="container-fluid">
+	  <div>
+		  <p>
+		  Send DM to all your followers with a single click! Don't worry, our
+		  algorithms know how to circumvent Twitter restrictions.
+		  </p>
+	  </div>
+
+	  <form class="container" method="post">
+		  {% csrf_token %}
+		  {{form}}
+		  <div class="d-grid my-1">
+			  <button class="btn btn-lg btn-block w3-theme-action">SEND</button>
+		  </div>
+	  </form>
+  </div>
+{% endblock content %}

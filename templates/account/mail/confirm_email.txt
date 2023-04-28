@@ -1,0 +1,5 @@
+Hi! Please click the link bellow to confirm your email
+http://localhost:8000/account/confirm?code={{code}}
+
+Or type the follow code in the box provided {{code}}
+
