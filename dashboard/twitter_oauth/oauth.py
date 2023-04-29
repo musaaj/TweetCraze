@@ -24,11 +24,11 @@ class TwitterAuthAPI:
         access_token_secret
 
         Args:
-            oauth_token: oauth_token as return by callback url
-            oauth_verifier: oauth_verifier as returned by the callback url
+            oauth_token (str): oauth_token as return by callback url
+            oauth_verifier (str): oauth_verifier as returned by the callback url
 
         Returns:
-            tuple(access_token, access_token_secret,) on success else None
+            tuple: access_token, access_token_secret on success else None
         """
         self.auth.request_token = {
             "oauth_token": oauth_token,
@@ -44,6 +44,9 @@ class TwitterAuthAPI:
     def authorization_url(self):
         """get authorization url to allow user to authenticate our app by login
         to his twitter account
+
+        Returns:
+            (str) url for user to authorize our app on success else None
         """
         try:
             return self.auth.get_authorization_url(signin_with_twitter=True)
@@ -57,6 +60,9 @@ class TwitterAuthAPI:
 
         Should only be called if this class was instanced with access_token and
         access_token_secret
+
+        Returns:
+            Tweepy.API: User context handler on success else None
         """
         try:
             return tweepy.API(self.auth)
